@@ -1,100 +1,21 @@
-# Contratos
-![Badge Status](https://img.shields.io/badge/status-em%20desenvolvimento-%2360C25E)
+# Cadastro de filmes
+![Badge Status](https://img.shields.io/badge/status-conclu%C3%ADdo-%235ab359?color=5ab359)
 
 ## Descrição do projeto
-Este projeto utiliza a API do Spotify para buscar nome de cantores ou bandas e simular a contratação para um evento. Minha experiência não permite algo mais trabalhado, portanto, existem bastante problemas nele por enquanto como validações, entre outro. Estou ciente deles. Serão corrigidos conforme eu ir adquirindo xp. Outro ponto foi a utilização de Vue.js. Nunca tinha visto. Apenas ouvido falar e pouco, inclusive. Sendo assim, este projeto está ainda muito longe do que desejo alcançar. Mas até o momento, é o que eu consegui fazer. Gostei bastante de fazer, pois além de desafiador, aprendi demais. 
+Este projeto foi desenvolvido utilizando Razor Pages no ASP.NET Core. Portanto, utilizando C# e para armazenamento o SQLite.
+
+Existem alguns pontos neste projeto que devem ser alterados, mas como eu atingi o que eu precisava, ficam como possíveis modificações futuras. 
+
+Eu realizei algumas pequenas modificações (em relação ao resultado do tutorial) que você irá identificar, caso desejar desenvolver o projeto.
 
 *******
 
-Vídeo do projeto:
-arraste o vídeo para esta linha
+## Vídeo do projeto:
 
-Caso você queira utilizar este projeto em sua máquina: 
-
-## Passos para rodar o projeto: 
- 1. [API do Spotify | Como funciona? Como utilizar neste projeto.](#apiuse)
- 2. [Rodando o projeto](#rundev)
- 3. [Limpando o localStorage](#afteruse)
- 4. [Dica: Gerando token com o Postman](#littletip)
- 
-
+https://github.com/Maciel47/crud-csharp-web/assets/66790565/cc72a175-e6a7-41f5-bea4-e851c49da5ce
 
  *******
+ 
+## Documentação | Faça o projeto você mesmo
+Não há segredo por trás desta dele. Basta acessar as documentações que você irá conseguir construir. Este projeto foi feito com a combinação dos seguintes tutoriais: [1. introdução ao Razor Pages no ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-7.0&tabs=visual-studio-code) | [2. adicionar um modelo a um aplicativo Razor Pages no ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/tutorials/razor-pages/model?view=aspnetcore-7.0&tabs=visual-studio-code) | [3. Razor Pages gerado por scaffolding no ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/tutorials/razor-pages/page?view=aspnetcore-7.0&tabs=visual-studio). Se você perceber eles são sequênciais e estão disponibilizados aqui da mesma forma. Montando o readme, identifiquei esse aqui também: [introdução ao Razor Pages no ASP.NET Core](https://learn.microsoft.com/pt-br/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio-code). Diferente do primeiro tutorial que carrega o "mesmo título" aparenta ter mais informações e inclusive pode auxiliar com as alterações dentre outras coisas que você desejar realizar no seu projeto.
 
-<div id='apiuse'/> 
-  
-## API do Spotify | Como funciona? Como utilizar neste projeto.
-Primeiro acesse (para abrir em uma nova guia: Crtl + clique botão esquerdo do mouse): https://developer.spotify.com/documentation/web-api/tutorials/getting-started 
-
-Nesta página, acesse sua conta ou crie uma. Feito isso, você vai criar um app, colocando apenas as informações básicas. Um detalhe importante, no campo "Redirect URIs" coloque a que você utiliza em seu projeto com a adição do '/callback'. Exemplo: http://localhost:5000/callback. 
-
-Ao criar o app, você vai acessar, em sua conta: Dashboard > Seu app > Settings. Aqui, você precisa de duas informações: Client ID e Client Secret (obs: Para visualizar o client secret, basta clicar no link abaixo do client id). Feito isso, você precisa colocar estas duas informações no projeto.
-
-Obs: Existem duas formas de gerar o token. Você pode utilizar a forma como está neste projeto, ou pode utilizar o Postman (ou qualquer outro software que lide com API).
-
-
-*******
-
-<div id='rundev'/>
-
-## Rodando o projeto
-
-Clone o projeto em uma pasta de sua escolha. Lembra do Client ID e Client Secret? Você vai colocar essas informações no respectivo caminho: '../src/services/clientServices.js'. Ao acessar, você irá notar que já está preparado. Basta colocar as informações. Feito isso, o restante será forma autônoma.
-Neste caso, quando for o primeiro acesso, será solicitado a autorização de acesso ao Spotify (basta clicar no botão da página) e tudo pronto. Você poderá utilizar a API.  
-
-
-O próximo passo é abrir o terminal e rodar: 
-
-```sh
-npm install
-```
-
-Feito isso, você vai instalar os pacotes, deixando configurado.
-
-Para rodar o projeto:
-
-```sh
-npm run dev
-```
-
-Agora é só usar, testar, estudar, quebrar e/ou melhorar. Aproveite.
-
-<div id='afteruse'/> 
-
-## Limpando o localStorage
-Este projeto utiliza o armazenamento do navegador (localStorage) por conta disso, ao concluir a utilização, não se esqueça de limpar o seu. 
-
-Eu utilizo o navegador Edge, e irei te explicar como fazer nele. Caso utilize outro, basta pesquisar que você consegue encontrar realizar a limpeza. 
-
-Para limpar no Edge, acesse a debugger tool (ctrl + shift + i), localize a aba Aplicativo (se não encontrar, clique no '+' que é possível estar nesta listagem). Feito isso, você irá encontar Armazenamento, e então você poderá ver o seu "localhost" ali. Clicando nele, você terá as colunas: Chave e Valor. Abaixo delas, estarão as informações. Basta clicar com o botão direito do mouse, e selecionar a opção Excluir. Faça isso tanto para hirerInfo quanto hirerAddress. E estará tudo certo e limpo. Lembrando que, você só irá armazenar informação ao concluir os "dois" formulários, sendo o de contrato e endereço. Caso você não tenha preenchido e continuado, seu localStorage ainda não terá armazenado estas informações.  
-
-*******
-
-<div id='littletip'/> 
-  
-## Dica: Gerando token com o Postman.
-Inicialmente, eu não tinha o processo rodando no próprio software, portanto utilizei Postman e como aprendi a utilizar, vou explicar o funcionamento caso você opte por utilizar ou queira testar como funciona. Eu utilizei a extensão do VSCode, mas você pode utilizar a plataforma que for melhor. Como eu utilizei o postman, os passos a seguir serão relativo a ele. Caso você utilize outro, será necessário que você busque o funcionamento dele.
-
-Obs: Os passos a seguir, requer que você tenha configurado já o app dentro da API do Spotify. Para isso, basta voltar na primeira seção: "API do Spotify | Como funciona? Como utilizar neste projeto".
-
-No postman, você vai acessar a aba "Authorization" e selecionar o type: OAuth 2.0. Feito isso, localize a área: "Configure New Token". Aqui, você vai preencher e/ou selecionar os campos da seguinte forma:
-
-Grant Type: Authorization Code (Acredito que seja padrão. Pode deixar.);
-
-Callback URL: Lembra da "Redirect URIs" que foi citada na API do Spotify? Utilizando o Postman, é essa que você vai copiar e colocar em seu app dentro do Spotify. (Aqui não é possível alterar. Apenas copie e cole no Spotify);
-
-Auth URL: https://accounts.spotify.com/authorize;
-
-Access Token URL: https://accounts.spotify.com/api/token;
-
-Client ID: Cole aqui o do Spotify;
-
-Client Secret: Cole aqui o do Spotify;
-
-Scope e State podem ficar vazio;
-
-Client Authentication: Send as Basic Auth header (Acredito que seja o padrão. Pode deixar).
-
-Agora, basta clicar em "Generate Access Token" e aguardar. Caso apareça o modal solicitando a autorização, confirme que se trata deste processo, e aceite. Neste processo é feito o login na sua conta e será solicitada a sua autorização (que é através de um botão apenas) para gerar o token. Autorizando, o token será enviado para o Postman, onde você vai encontrar na mesma página, próximo (sobe a página um pouco que você irá encontrar) dos campos citados anteriormente. Este token vence a cada uma hora, porém, para gerar um novo basta clicar "refresh" abaixo do token no postman. Para facilitar o processo, crie um request Get, nomeie ele de maneira que você saiba que se trata deste token e quando precisar, basta utilizar o refresh. 
-
-Obs: Para melhorar a segurança, você pode salvar o client id e client secret em variáveis no Postman. 
